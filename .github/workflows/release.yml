@@ -21,7 +21,10 @@ jobs:
           node-version-file: .node-version
           package-manager-cache: false
           registry-url: https://registry.npmjs.org
-      - run: corepack enable pnpm
+      - uses: pnpm/action-setup@v6
+        with:
+          version: 11.21.0
+          run_install: false
       - run: pnpm install --frozen-lockfile
       - run: pnpm verify
       - uses: changesets/action@v1
