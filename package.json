@@ -1,0 +1,24 @@
+{
+  "name": "barkbyborders-toolkits",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@11.21.0",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter @barkbyborders/localization build",
+    "changeset": "changeset",
+    "lint": "eslint '**/*.ts'",
+    "pack:check": "cd packages/localization && npm pack --dry-run --ignore-scripts",
+    "release": "changeset publish",
+    "test": "pnpm --filter @barkbyborders/localization test",
+    "type-check": "pnpm --filter @barkbyborders/localization type-check",
+    "verify": "pnpm lint && pnpm type-check && pnpm test && pnpm build && pnpm pack:check",
+    "version:changeset": "changeset version"
+  },
+  "devDependencies": {
+    "@changesets/cli": "catalog:",
+    "@typescript-eslint/eslint-plugin": "catalog:",
+    "@typescript-eslint/parser": "catalog:",
+    "eslint": "catalog:"
+  }
+}

@@ -1,0 +1,14 @@
+packages:
+  - 'packages/*'
+
+catalog:
+  '@changesets/cli': ^2.29.8
+  '@typescript-eslint/eslint-plugin': ^8.46.3
+  '@typescript-eslint/parser': ^8.46.3
+  eslint: ^9.0.0
+  typescript: npm:@typescript/typescript6@^6.0.2
+  typescript7: npm:typescript@^7.0.2
+  vitest: 4.0.18
+
+allowBuilds:
+  esbuild: true

@@ -1,0 +1,44 @@
+{
+  "name": "@barkbyborders/localization",
+  "version": "0.0.0",
+  "description": "Framework-agnostic TypeScript localization with strongly typed nested translation keys.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kia6918/barkbyborders-toolkits.git",
+    "directory": "packages/localization"
+  },
+  "homepage": "https://github.com/kia6918/barkbyborders-toolkits/tree/main/packages/localization",
+  "bugs": {
+    "url": "https://github.com/kia6918/barkbyborders-toolkits/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "prepack": "pnpm --filter @barkbyborders/localization build",
+    "test": "vitest run --config vitest.config.ts",
+    "type-check": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "typescript7": "catalog:",
+    "vitest": "catalog:"
+  }
+}
