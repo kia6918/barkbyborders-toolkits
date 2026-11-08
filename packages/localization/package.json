@@ -1,6 +1,6 @@
 {
   "name": "@barkbyborders/localization",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Framework-agnostic TypeScript localization with strongly typed nested translation keys.",
   "license": "MIT",
   "type": "module",
